@@ -8,7 +8,8 @@ from models.ordermodels import OrderModel, OrderItemsModel, ShippingAddressModel
 # from uuid import uuid4
 
 
-stripe.api_key = os.environ("STRIPE_KEY")
+# stripe.api_key = os.environ("STRIPE_KEY")
+stripe.api_key = ""
 
 
 class OrderService:
@@ -70,9 +71,8 @@ class OrderService:
     def getOrderById(id: int, db: Session):
         order_byid = db.query(OrderModel).filter(OrderModel.id == id).first()
 
-        orderItembyid = (
-            db.query(OrderItemsModel).filter(OrderItemsModel.id == order_byid.id).all()
-        )
+        orderItembyid = (db.query(OrderItemsModel).filter(
+            OrderItemsModel.id == order_byid.id).all())
         shippingByid = (
             db.query(ShippingAddressModel)
             .filter(ShippingAddressModel.id == order_byid.id)
@@ -100,4 +100,3 @@ class OrderService:
         )
 
         return order_by_userid
-
