@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-SQLALCHAMY_DATABASE_URL = "postgresql://postgres:@localhost:5432/ecomfastreact"
+SQLALCHAMY_DATABASE_URL = "postgresql://postgres:01676940253@localhost:5432/ecomfastreact"
 
 engine = create_engine(SQLALCHAMY_DATABASE_URL)
 
