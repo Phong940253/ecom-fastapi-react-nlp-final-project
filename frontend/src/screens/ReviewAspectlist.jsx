@@ -5,11 +5,11 @@ import Error from "../components/Error";
 import { getAllAspectreviews } from "../redux/action/review.action";
 
 export default function Reviewlist() {
-  const getordersstate = useSelector((state) => state.getAllOrdersReducer);
+  const getreviewsstate = useSelector((state) => state.getAllAspectReviewsReducer);
 
-  const { loading, error, orders } = getordersstate;
-  const review = orders.review;
-  const analysis = orders.analysis;
+  const { loading, error, aspectreview } = getreviewsstate;
+  const review = aspectreview.review;
+  const analysis = aspectreview.analysis;
   const dispatch = useDispatch();
 
   useEffect(() => {

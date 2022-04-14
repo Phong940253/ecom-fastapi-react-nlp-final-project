@@ -13,7 +13,7 @@ export default function Navbar() {
     <div>
       <nav className="navbar navbar-expand-lg">
         <Link className="navbar-brand" to="/">
-          SHEY SHOP
+          ECOMSHOP
         </Link>
         <button
           className="navbar-toggler"

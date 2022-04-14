@@ -127,18 +127,18 @@ export const getAllreviews = () => (dispatch, getState) => {
 
 export const getAllAspectreviews = () => (dispatch, getState) => {
   dispatch({
-    type: "GET_ALLORDERS_REQUEST",
+    type: "GET_ALLASPECTREVIEW_REQUEST",
   });
 
   axios
     .get("/review/analytics")
     .then((res) => {
-      dispatch({ type: "GET_ALLORDERS_SUCCESS", payload: res.data });
+      dispatch({ type: "GET_ALLASPECTREVIEW_SUCCESS", payload: res.data });
       console.log(res.data);
     })
     .catch((err) => {
       dispatch({
-        type: "GET_ALLORDERS_FAILED",
+        type: "GET_ALLASPECTREVIEW_FAILED",
         payload: err,
       });
       console.log(err);
