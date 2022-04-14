@@ -38,7 +38,7 @@ export default function UsersList() {
                   <td>{user.email}</td>
                   <td>
                     <i
-                      class="far fa-trash-alt"
+                      className="far fa-trash-alt"
                       onClick={() => {
                         dispatch(deleteUser(user.id));
                       }}

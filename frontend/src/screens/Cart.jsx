@@ -50,7 +50,7 @@ export default function CartScreen() {
                     <td>
                       <i
                         style={{ color: "red" }}
-                        class="far fa-trash-alt"
+                        className="far fa-trash-alt"
                         onClick={() => {
                           dispatch(deleteFromCart(item));
                         }}
