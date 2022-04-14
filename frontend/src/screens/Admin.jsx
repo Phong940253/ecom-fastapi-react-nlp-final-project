@@ -6,6 +6,8 @@ import ProductList from "./ProductList";
 import AddProduct from "./AddProduct";
 import Editproduct from "./EditProduct";
 import Orderslist from "./Orderlist";
+import Reviewslist from "./Reviewlist";
+import ReviewsAspectlist from "./ReviewAspectlist";
 
 export default function AdminScreen() {
   const userState = useSelector((state) => state.loginReducer);
@@ -47,6 +49,11 @@ export default function AdminScreen() {
                 Orderslist
               </Link>
             </li>
+            <li>
+              <Link to="/admin/reviewslist" style={{ color: "black" }}>
+                Reviews list
+              </Link>
+            </li>
           </ul>
 
           {/* Switch */}
@@ -60,6 +67,9 @@ export default function AdminScreen() {
               component={Editproduct}
             />
             <Route path="/admin/orderslist" component={Orderslist} />
+            <Route path="/admin/reviewslist" component={Reviewslist} />
+
+            <Route path="/admin/reviewsaspectlist" component={ReviewsAspectlist} />
           </Switch>
         </div>
       </div>
