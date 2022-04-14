@@ -8,6 +8,8 @@ export default function Reviewlist() {
   const getordersstate = useSelector((state) => state.getAllOrdersReducer);
 
   const { loading, error, orders } = getordersstate;
+  const review = orders.review;
+  const analysis = orders.analysis;
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -32,8 +34,8 @@ export default function Reviewlist() {
         </thead>
 
         <tbody>
-          {orders &&
-            orders.map((order) => {
+          {review &&
+            review.map((order, i) => {
               return (
                 <tr
                   key={order.id}
@@ -44,9 +46,9 @@ export default function Reviewlist() {
                   <td>{order.id}</td>
                   <td>{order.product_id}</td>
                   <td>{order.user_id}</td>
-                  <td>{order.comment}</td>
-                  <td>{order.rating}</td>
-                  <td>{order.name}</td>
+                  <td>{analysis[i].sentence}</td>
+                  <td>{analysis[i].aspect.map((aspect, index) => (analysis[i].sentiment[index] == "Positive" ? <button className="btn btn-success btn-sm">{aspect}</button> : analysis[i].sentiment[index] == "Negative" ? <button className="btn btn-danger btn-sm">{aspect}</button> : <button className="btn btn-warning btn-sm">{aspect}</button>))}</td>
+                  {/* <td>{analysis[i].sentiment.map(sentiment => )}</td> */}
                 </tr>
               );
             })}

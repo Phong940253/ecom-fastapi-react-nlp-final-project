@@ -45,11 +45,11 @@ h2 {
   font-size: 25px !important;
   font-weight: bold !important;
 }
-.btn {
+/* .btn {
   background-color: #825ee4 !important;
   color: white !important;
   width: 200px !important;
-}
+} */
 
 input {
   box-shadow: none !important;
@@ -91,4 +91,17 @@ select {
 th,
 td {
   text-align: left !important;
+}
+
+.positive {
+  color: white;
+  background-color: green;
+}
+
+.negative {
+
+}
+
+.neutral {
+
 }

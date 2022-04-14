@@ -141,5 +141,6 @@ export const getAllAspectreviews = () => (dispatch, getState) => {
         type: "GET_ALLORDERS_FAILED",
         payload: err,
       });
+      console.log(err);
     });
 };
