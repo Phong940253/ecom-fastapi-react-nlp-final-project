@@ -28,7 +28,7 @@ def getAllAspectReview(db: Session = Depends(get_db)):
                                                    print_result=False,  # print the result
                                                    pred_sentiment=True,  # Predict the sentiment of extracted aspect terms
                                                    )
-    return atepc_result
+    return {'analysis': atepc_result, 'review': list_object_review}
 
 
 @router.post("/create/{productid}")
