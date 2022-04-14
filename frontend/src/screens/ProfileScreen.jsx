@@ -87,7 +87,7 @@ export default function Profilescreen() {
               />
 
               <div className="text-right">
-                <button type="submit" className="btn mt-3">
+                <button type="submit" className="btn btn-primary mt-3">
                   UPDATE
                 </button>
               </div>

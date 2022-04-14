@@ -28,7 +28,7 @@ export default function Reviewlist() {
             <th>Product Id</th>
             <th>User Id</th>
             <th>Comment</th>
-            <th>Rating</th>
+            <th>Analysis</th>
             <th>Name</th>
           </tr>
         </thead>
@@ -49,6 +49,7 @@ export default function Reviewlist() {
                   <td>{analysis[i].sentence}</td>
                   <td>{analysis[i].aspect.map((aspect, index) => (analysis[i].sentiment[index] == "Positive" ? <button className="btn btn-success btn-sm">{aspect}</button> : analysis[i].sentiment[index] == "Negative" ? <button className="btn btn-danger btn-sm">{aspect}</button> : <button className="btn btn-warning btn-sm">{aspect}</button>))}</td>
                   {/* <td>{analysis[i].sentiment.map(sentiment => )}</td> */}
+                  <td>{order.name}</td>
                 </tr>
               );
             })}

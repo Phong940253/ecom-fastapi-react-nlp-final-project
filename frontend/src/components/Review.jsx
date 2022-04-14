@@ -57,7 +57,7 @@ export default function Review({ product }) {
           setcomment(e.target.value);
         }}
       />
-      <button className="btn mt-3" onClick={sendReview}>
+      <button className="btn btn-primary mt-3" onClick={sendReview}>
         Submit Review
       </button>
 

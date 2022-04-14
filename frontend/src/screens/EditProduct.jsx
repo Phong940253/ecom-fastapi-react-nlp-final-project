@@ -125,7 +125,7 @@ export default function Editproduct({ match }) {
               }}
             />
             <button
-              className="btn mt-5"
+              className="btn btn-secondary mt-5"
               type="submit"
               style={{ float: "left" }}
             >

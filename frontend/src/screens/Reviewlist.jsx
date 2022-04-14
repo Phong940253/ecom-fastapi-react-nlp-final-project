@@ -54,7 +54,7 @@ export default function Reviewlist() {
         </tbody>
       </table>
       <Link to={`/admin/reviewsaspectlist`}>
-        <button className="btn">
+        <button className="btn btn-primary">
           Aspect Based Sentiment Analysis
         </button>
       </Link>

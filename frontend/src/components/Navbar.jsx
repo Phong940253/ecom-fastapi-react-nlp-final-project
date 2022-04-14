@@ -32,7 +32,7 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <div className="navbar-nav ml-auto">
             {currentUser ? (
-              <div class="dropdown">
+              <div className="dropdown">
                 <button
                   className="btn btn-secondary dropdown-toggle"
                   type="button"
@@ -64,7 +64,7 @@ export default function Navbar() {
                       dispatch(logoutUser());
                     }}
                   >
-                    Logout <i class="fas fa-sign-out-alt"></i>
+                    Logout <i className="fas fa-sign-out-alt"></i>
                   </li>
                 </div>
               </div>
@@ -78,7 +78,7 @@ export default function Navbar() {
 
             <li className="nav-item">
               <Link className="nav-link" to="/cart">
-                <i class="fas fa-shopping-cart"></i> {cartItems.length}
+                <i className="fas fa-shopping-cart"></i> {cartItems.length}
               </Link>
             </li>
           </div>
